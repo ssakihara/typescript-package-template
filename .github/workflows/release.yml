@@ -1,0 +1,38 @@
+name: Publish package to GitHub Packages
+on:
+  push:
+    branches: [main]
+
+env:
+  NODE_OPTIONS: '--experimental-modules --experimental-vm-modules --max-old-space-size=4096'
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile]
+
+      - name: Release
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          pnpm run semantic-release

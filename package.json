@@ -1,0 +1,79 @@
+{
+  "name": "@ssakihara/typescript-package-template",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "repository": "https://github.com/ssakihara/typescript-package-template",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
+  "volta": {
+    "node": "18.14.0"
+  },
+  "scripts": {
+    "prepare": "pnpm run build && husky install",
+    "docs": "typedoc src/ && vite --config ./vite.doc.config.js",
+    "lint-staged": "lint-staged",
+    "lint": "eslint --fix --ignore-path .gitignore '**/*.{js,ts}'",
+    "format": "prettier --write '**/*.{js,ts,json,md}'",
+    "semantic-release": "semantic-release -e ./release.config.cjs",
+    "build": "tsc && vite build",
+    "test": "jest",
+    "test:e2e": "playwright test"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/ssakihara"
+  },
+  "dependencies": {
+    "playwright": "1.30.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "7.19.1",
+    "@commitlint/cli": "17.4.2",
+    "@commitlint/config-conventional": "17.4.2",
+    "@playwright/test": "1.30.0",
+    "@semantic-release/commit-analyzer": "9.0.2",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/github": "8.0.7",
+    "@semantic-release/npm": "9.0.2",
+    "@types/jest": "29.4.0",
+    "@types/node": "18.13.0",
+    "@typescript-eslint/eslint-plugin": "5.51.0",
+    "@typescript-eslint/parser": "5.51.0",
+    "eslint": "8.34.0",
+    "eslint-config-prettier": "8.6.0",
+    "husky": "8.0.3",
+    "jest": "29.4.2",
+    "lint-staged": "13.1.1",
+    "prettier": "2.8.4",
+    "semantic-release": "20.1.0",
+    "ts-jest": "29.0.5",
+    "ts-node": "10.9.1",
+    "typedoc": "0.23.25",
+    "typescript": "4.9.5",
+    "vite": "4.1.1"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
+}
