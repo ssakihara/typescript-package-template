@@ -1,6 +1,9 @@
-import { devices } from '@playwright/test';
+import dotenv from 'dotenv';
+import { defineConfig, devices } from '@playwright/test';
 
-const config = {
+dotenv.config();
+
+export default defineConfig({
   testDir: 'tests/e2e',
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
@@ -15,15 +18,14 @@ const config = {
     },
     // 動作を遅くして内容を確認したいとき
     launchOptions: {
-      slowMo: 1000,
+      slowMo: 500,
     },
   },
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 2400 } },
     },
   ],
-};
-
-export default config;
+  timeout: 1000 * 60 * 5,
+});

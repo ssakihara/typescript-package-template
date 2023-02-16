@@ -13,6 +13,7 @@ specifiers:
   '@types/node': 18.13.0
   '@typescript-eslint/eslint-plugin': 5.51.0
   '@typescript-eslint/parser': 5.51.0
+  dotenv: 16.0.3
   eslint: 8.34.0
   eslint-config-prettier: 8.6.0
   husky: 8.0.3
@@ -28,6 +29,7 @@ specifiers:
   vite: 4.1.1
 
 dependencies:
+  dotenv: 16.0.3
   playwright: 1.30.0
 
 devDependencies:
@@ -2367,6 +2369,11 @@ packages:
     dependencies:
       is-obj: 2.0.0
     dev: true
+
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
+    dev: false
 
   /duplexer2/0.1.4:
     resolution: {integrity: sha512-asLFVfWWtJ90ZyOUHMqk7/S2w2guQKxUI2itj3d92ADHhxUSbCMGi1f1cBcJ7xM1To+pE/Khbwo1yuNbMEPKeA==}

@@ -15,7 +15,8 @@ extends:
   - prettier
 ignorePatterns:
   - commitlint.config.cjs
-  - playwright.config.js
+  - jest.config.cjs
+  - playwright.config.ts
   - release.config.cjs
   - vite.config.js
   - vite.doc.config.js
