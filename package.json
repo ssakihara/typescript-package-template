@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "dotenv": "16.0.3",
+    "mongoose": "6.9.2",
     "playwright": "1.30.0"
   },
   "devDependencies": {
