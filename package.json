@@ -25,7 +25,7 @@
     "node": "18.14.0"
   },
   "scripts": {
-    "prepare": "pnpm run build && husky install",
+    "prepare": "husky install && pnpm build",
     "docs": "typedoc src/ && vite --config ./vite.doc.config.js",
     "lint-staged": "lint-staged",
     "lint": "eslint --fix --ignore-path .gitignore '**/*.{js,ts}'",
@@ -41,34 +41,34 @@
   "dependencies": {
     "dotenv": "16.0.3",
     "mongoose": "6.9.2",
-    "playwright": "1.30.0"
+    "playwright": "1.31.2"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.19.1",
-    "@commitlint/cli": "17.4.2",
-    "@commitlint/config-conventional": "17.4.2",
-    "@playwright/test": "1.30.0",
+    "@commitlint/cli": "17.4.4",
+    "@commitlint/config-conventional": "17.4.4",
+    "@playwright/test": "1.31.2",
     "@semantic-release/commit-analyzer": "9.0.2",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/github": "8.0.7",
     "@semantic-release/npm": "9.0.2",
     "@types/jest": "29.4.0",
-    "@types/node": "18.13.0",
-    "@typescript-eslint/eslint-plugin": "5.51.0",
-    "@typescript-eslint/parser": "5.51.0",
-    "eslint": "8.34.0",
+    "@types/node": "18.14.6",
+    "@typescript-eslint/eslint-plugin": "5.54.0",
+    "@typescript-eslint/parser": "5.54.0",
+    "eslint": "8.35.0",
     "eslint-config-prettier": "8.6.0",
     "husky": "8.0.3",
-    "jest": "29.4.2",
-    "lint-staged": "13.1.1",
+    "jest": "29.4.3",
+    "lint-staged": "13.1.2",
     "prettier": "2.8.4",
     "prettier-plugin-organize-imports": "3.2.2",
-    "semantic-release": "20.1.0",
+    "semantic-release": "20.1.1",
     "ts-jest": "29.0.5",
     "ts-node": "10.9.1",
-    "typedoc": "0.23.25",
+    "typedoc": "0.23.26",
     "typescript": "4.9.5",
-    "vite": "4.1.1"
+    "vite": "4.1.4"
   },
   "lint-staged": {
     "*.{js,ts}": [
