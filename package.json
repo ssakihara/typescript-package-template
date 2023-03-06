@@ -25,7 +25,7 @@
     "node": "18.14.0"
   },
   "scripts": {
-    "prepare": "pnpm run build && husky install",
+    "prepare": "husky install && pnpm build",
     "docs": "typedoc src/ && vite --config ./vite.doc.config.js",
     "lint-staged": "lint-staged",
     "lint": "eslint --fix --ignore-path .gitignore '**/*.{js,ts}'",
@@ -40,19 +40,19 @@
   },
   "dependencies": {
     "dotenv": "16.0.3",
-    "playwright": "1.31.1"
+    "playwright": "1.31.2"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.19.1",
     "@commitlint/cli": "17.4.4",
     "@commitlint/config-conventional": "17.4.4",
-    "@playwright/test": "1.31.1",
+    "@playwright/test": "1.31.2",
     "@semantic-release/commit-analyzer": "9.0.2",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/github": "8.0.7",
     "@semantic-release/npm": "9.0.2",
     "@types/jest": "29.4.0",
-    "@types/node": "18.14.2",
+    "@types/node": "18.14.6",
     "@typescript-eslint/eslint-plugin": "5.54.0",
     "@typescript-eslint/parser": "5.54.0",
     "eslint": "8.35.0",

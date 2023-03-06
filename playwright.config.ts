@@ -3,6 +3,8 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+const timeout = 1000 * 60 * 5;
+
 export default defineConfig({
   testDir: 'tests/e2e',
   forbidOnly: !!process.env.CI,
@@ -27,5 +29,5 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 2400 } },
     },
   ],
-  timeout: 1000 * 60 * 5,
+  timeout,
 });
