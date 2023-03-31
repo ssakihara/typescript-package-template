@@ -6,7 +6,7 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.dev.json',
+    project: './tsconfig.json',
   },
   plugins: ['@typescript-eslint'],
   extends: [
@@ -22,7 +22,7 @@ module.exports = {
     'playwright.config.ts',
     'prettierrc.cjs',
     'release.config.cjs',
-    'vite.config.js',
-    'vite.doc.config.js',
+    'vite.config.ts',
+    'vite.doc.config.ts',
   ],
 };
