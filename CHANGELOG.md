@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/ssakihara/typescript-package-template/compare/v1.1.0...v1.1.1) (2023-04-14)
+
+### Bug Fixes
+
+- 🐛 TypeScript のビルド方法を変更する ([8aeecce](https://github.com/ssakihara/typescript-package-template/commit/8aeeccef6395ab191e15a883ac9db0af63356b2a))
+
 # [1.1.0](https://github.com/ssakihara/typescript-package-template/compare/v1.0.1...v1.1.0) (2023-04-06)
 
 ### Features
