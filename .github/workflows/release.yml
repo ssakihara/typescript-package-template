@@ -7,6 +7,12 @@ env:
   NODE_OPTIONS: '--experimental-modules --experimental-vm-modules --max-old-space-size=4096'
   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
 
+permissions:
+  contents: write
+  issues: write
+  packages: write
+  pull-requests: write
+
 jobs:
   release:
     if: github.repository == 'ssakihara/typescript-package-template'
@@ -49,7 +55,7 @@ jobs:
 
       - name: Release
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pnpm semantic-release

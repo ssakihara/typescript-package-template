@@ -13,7 +13,7 @@
       "require": "./dist/index.js"
     }
   },
-  "repository": "https://github.com/ssakihara/typescript-package-template",
+  "repository": "github:ssakihara/typescript-package-template",
   "files": [
     "dist"
   ],
