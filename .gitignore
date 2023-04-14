@@ -107,7 +107,6 @@ Thumbs.db
 
 # tsc outDir
 dist
-types
 
 # doc
 docs

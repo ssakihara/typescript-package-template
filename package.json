@@ -5,17 +5,17 @@
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "./types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     }
   },
   "repository": "https://github.com/ssakihara/typescript-package-template",
   "files": [
-    "dist",
-    "types"
+    "dist"
   ],
   "license": "MIT",
   "engines": {
@@ -33,7 +33,7 @@
     "lint": "eslint --fix --ignore-path .gitignore '**/*.{js,ts}'",
     "format": "prettier --write '**/*.{js,ts,json,md}'",
     "semantic-release": "semantic-release -e ./release.config.cjs",
-    "build": "tsc -p tsconfig.build.json && vite build",
+    "build": "vite build",
     "test": "pnpm test:unit && pnpm test:e2e",
     "test:unit": "jest",
     "test:e2e": "playwright test"
@@ -75,6 +75,7 @@
     "typedoc": "0.24.1",
     "typescript": "4.9.5",
     "vite": "4.2.1",
+    "vite-plugin-dts": "2.2.0",
     "vite-tsconfig-paths": "4.0.8"
   },
   "lint-staged": {
