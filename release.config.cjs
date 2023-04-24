@@ -36,6 +36,13 @@ module.exports = {
         message: 'feat: 🎸 ${nextRelease.gitTag} [skip ci]\n\n${nextRelease.notes}',
       },
     ],
-    '@semantic-release/github',
+    [
+      '@semantic-release/github',
+      {
+        successComment: false,
+        failComment: false,
+        failTitle: false,
+      },
+    ],
   ],
 };
