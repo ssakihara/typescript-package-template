@@ -8,6 +8,7 @@
       "#app/*": ["./src/features/*"],
       "@/*": ["./src/*"]
     },
+    "types": ["vitest/globals"],
     "noEmit": true,
     "sourceMap": false,
     "esModuleInterop": true,
