@@ -19,6 +19,7 @@ module.exports = {
   ignorePatterns: [
     '.eslintrc.cjs',
     'commitlint.config.cjs',
+    'loader.js',
     'playwright.config.ts',
     'prettierrc.cjs',
     'release.config.cjs',

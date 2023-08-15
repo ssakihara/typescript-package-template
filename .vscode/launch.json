@@ -8,10 +8,9 @@
       "type": "node",
       "request": "launch",
       "name": "Launch TypeScript",
-      "preLaunchTask": "Compile TypeScript",
       "cwd": "${workspaceFolder}",
       "program": "${file}",
-      "runtimeArgs": ["--loader", "ts-node/esm"],
+      "runtimeArgs": ["--no-warnings", "--experimental-specifier-resolution=node", "--loader", "./loader.js"],
       "envFile": "${workspaceFolder}/.env"
     }
   ]
