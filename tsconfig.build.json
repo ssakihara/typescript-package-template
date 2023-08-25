@@ -1,0 +1,25 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "noEmit": false,
+    "declaration": true,
+    "removeComments": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "docs",
+    "tests",
+    ".eslintrc.cjs",
+    ".prettierrc.cjs",
+    "commitlint.config.cjs",
+    "loader.js",
+    "playwright.config.ts",
+    "release.config.cjs",
+    "vite.doc.config.ts",
+    "vite.config.ts"
+  ]
+}

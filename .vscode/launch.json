@@ -9,8 +9,9 @@
       "request": "launch",
       "name": "Launch TypeScript",
       "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Compile TypeScript",
       "program": "${file}",
-      "runtimeArgs": ["--no-warnings", "--experimental-specifier-resolution=node", "--loader", "./loader.js"],
+      "runtimeArgs": ["--no-warnings", "--experimental-specifier-resolution=node", "--loader", "./loader.mjs"],
       "envFile": "${workspaceFolder}/.env"
     }
   ]

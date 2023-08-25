@@ -17,6 +17,8 @@ module.exports = {
     'prettier',
   ],
   ignorePatterns: [
+    'dist',
+    'docs',
     '.eslintrc.cjs',
     'commitlint.config.cjs',
     'loader.js',
