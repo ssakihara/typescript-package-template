@@ -1,3 +1,9 @@
+# [1.2.0](https://github.com/ssakihara/typescript-package-template/compare/v1.1.1...v1.2.0) (2023-08-30)
+
+### Features
+
+- 🎸 add logger ([05fdbdc](https://github.com/ssakihara/typescript-package-template/commit/05fdbdc720b84a14be88ee87b4ef95ebbf8a327f))
+
 ## [1.1.1](https://github.com/ssakihara/typescript-package-template/compare/v1.1.0...v1.1.1) (2023-04-14)
 
 ### Bug Fixes
