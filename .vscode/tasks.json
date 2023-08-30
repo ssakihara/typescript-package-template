@@ -2,15 +2,12 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Compile TypeScript",
-      "type": "shell",
-      "command": "pnpm build",
+      "type": "npm",
+      "script": "build",
+      "group": "build",
       "problemMatcher": [],
-      "presentation": {
-        "reveal": "never",
-        "echo": false,
-        "close": true
-      }
+      "label": "npm: build",
+      "detail": "pnpm clean && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json"
     }
   ]
 }
