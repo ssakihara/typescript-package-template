@@ -7,11 +7,11 @@
     {
       "type": "node",
       "request": "launch",
+      "runtimeExecutable": "pnpm",
       "name": "Launch TypeScript",
-      "preLaunchTask": "npm: build",
       "cwd": "${workspaceFolder}",
       "program": "${file}",
-      "runtimeArgs": ["--no-warnings", "--experimental-specifier-resolution=node", "--loader", "./loader.js"],
+      "runtimeArgs": ["tsx"],
       "envFile": "${workspaceFolder}/.env"
     }
   ]
