@@ -1,3 +1,9 @@
+# [1.3.0](https://github.com/ssakihara/typescript-package-template/compare/v1.2.0...v1.3.0) (2023-09-15)
+
+### Features
+
+- 🎸 add log file ([7539c72](https://github.com/ssakihara/typescript-package-template/commit/7539c725d2ab56f7bfbe406460c38b6b74694099))
+
 # [1.2.0](https://github.com/ssakihara/typescript-package-template/compare/v1.1.1...v1.2.0) (2023-08-30)
 
 ### Features
