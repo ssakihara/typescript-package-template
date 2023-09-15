@@ -1,7 +1,7 @@
 import log4js, { Level, LoggingEvent } from 'log4js';
 
 const level = process.env.LOG_LEVEL ?? 'info';
-const appenders = process.env.K_SERVICE ? ['gcp'] : ['console'];
+const appenders = process.env.K_SERVICE ? ['gcp'] : ['console', 'file'];
 
 const gcpAppender = (logEvent: LoggingEvent) => {
   const entry: {
@@ -32,6 +32,11 @@ log4js.configure({
     console: {
       type: 'console',
       layout: { type: 'pattern', pattern: '%[%m%]' },
+    },
+    file: {
+      type: 'file',
+      filename: 'debug.log',
+      layout: { type: 'pattern', pattern: '%d{yyyy-MM-dd hh:mm:ss} %p %m' },
     },
     gcp: {
       type: {
