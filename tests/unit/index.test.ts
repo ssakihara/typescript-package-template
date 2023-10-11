@@ -1,4 +1,4 @@
-import { sum } from '#app/cal';
+import { sum } from '#app/cal/index.js';
 
 test('basic', () => {
   expect(sum()).toBe(0);

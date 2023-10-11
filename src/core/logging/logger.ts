@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default-member */
 import log4js, { Level, LoggingEvent } from 'log4js';
 
 const level = process.env.LOG_LEVEL ?? 'info';
@@ -19,6 +20,7 @@ const gcpAppender = (logEvent: LoggingEvent) => {
   } else if (typeof logEvent?.data?.[0] == 'string' && logEvent?.data.length === 1) {
     entry.message = logEvent?.data?.[0];
   } else if (logEvent?.data.length === 1) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     entry.jsonPayload = { ...logEvent?.data[0] };
   } else {
     entry.jsonPayload = logEvent?.data;
@@ -40,8 +42,7 @@ log4js.configure({
     },
     gcp: {
       type: {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        configure: (config, layouts, findAppender, levels) => {
+        configure: (_config, _layouts, _findAppender, _levels) => {
           return gcpAppender;
         },
       },
