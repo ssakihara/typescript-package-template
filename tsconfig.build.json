@@ -12,7 +12,7 @@
     "node_modules",
     "dist",
     "docs",
-    "tests",
+    "test",
     ".eslintrc.cjs",
     ".prettierrc.cjs",
     "commitlint.config.cjs",

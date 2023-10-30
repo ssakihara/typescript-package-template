@@ -10,8 +10,8 @@ export default defineConfig({
   },
   test: {
     globals: true,
-    include: ['tests/unit/**/*.test.ts'],
-    setupFiles: './tests/unit/vitest.setup.ts',
+    include: ['test/unit/**/*.test.ts'],
+    setupFiles: './test/unit/vitest.setup.ts',
     testTimeout: 1000 * 60 * 1,
   },
   plugins: [tsconfigPaths(), dts()],

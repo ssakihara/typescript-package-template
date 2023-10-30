@@ -6,7 +6,7 @@ config();
 const timeout = 1000 * 60 * 5;
 
 export default defineConfig({
-  testDir: 'tests/e2e',
+  testDir: 'test/e2e',
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   use: {

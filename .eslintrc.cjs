@@ -40,7 +40,7 @@ module.exports = {
     'import/no-relative-parent-imports': [
       'error',
       {
-        ignore: ['#app', '@/', '@tests/'],
+        ignore: ['#app', '@/', '@test/'],
       },
     ],
     '@typescript-eslint/naming-convention': [

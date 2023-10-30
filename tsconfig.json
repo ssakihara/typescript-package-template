@@ -15,7 +15,7 @@
     "paths": {
       "#app/*": ["./src/features/*"],
       "@/*": ["./src/*"],
-      "@tests/*": ["./tests/*"]
+      "@test/*": ["./test/*"]
     },
     "types": ["vitest/globals"],
     "allowJs": true,
